@@ -22,13 +22,25 @@ pnpm install react-bezier-spline-editor
 
 ### Rendering Editor
 
+For next js
+
 ```tsx
-import { BezierSplineEditor } from 'react-bezier-spline-editor/react';
+'use client';
 ```
 
 ```tsx
-function MyComponent() {
-  const [showPoints, setShowPoints] = useState(true);
+import { BezierSplineEditor } from 'react-bezier-spline-editor/react';
+import type { Point } from 'react-bezier-spline-editor/core';
+```
+
+```tsx
+function MyBezierSplineEditor() {
+  const [points, setPoints] = useState<Point[]>([
+    { x: 0, y: 0 },
+    { x: 0.25, y: 0.25 },
+    { x: 0.75, y: 0.75 },
+    { x: 1, y: 1 },
+  ]);
 
   return <BezierSplineEditor points={points} onPointsChange={setPoints} />;
 }
@@ -73,6 +85,7 @@ Copy the code below for the same styling as the demo
   }}
 />
 ```
+
 </details>
 
 ### Spline Calculation
