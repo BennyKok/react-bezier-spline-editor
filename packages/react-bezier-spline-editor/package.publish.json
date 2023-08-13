@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "./core": {
+            "import": "./dist/core/index.js",
+            "default": "./dist/core/index.cjs",
+            "types": "./dist/core/index.d.ts"
+        },
+        "./react": {
+            "import": "./dist/react/index.js",
+            "default": "./dist/react/index.cjs",
+            "types": "./dist/react/index.d.ts"
+        }
+    },
+    "typesVersions": {
+        "*": {
+            "react": [
+                "./dist/react/index.d.ts"
+            ],
+            "core": [
+                "./dist/react/core.d.ts"
+            ]
+        }
+    }
+}
