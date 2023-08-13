@@ -2,6 +2,10 @@
 
 A modern bezier spline editor for react.
 
+
+https://github.com/BennyKok/react-bezier-spline-editor/assets/18395202/ba1f8114-30ec-4738-b7ff-ead81a582f51
+
+
 - Double click to add / remove point
 - Un-styled, style with your own css
 - Display point coordinates
