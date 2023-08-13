@@ -34,8 +34,8 @@ export default function Home() {
         </a>
       </div>
 
-      <div className="flex gap-10 h-full">
-        <Card className="w-[460px] h-full">
+      <div className="flex flex-col items-center lg:items-start lg:flex-row gap-10 h-full">
+        <Card className="w-full md:w-[460px] h-full">
           <CardBody>
             <>Double Click to add points</>
             <p className="mt-4">Install</p>
@@ -60,10 +60,10 @@ export default function Home() {
             className: 'stroke-gray-200',
           }}
           indicatorProps={{
-            className: 'fill-current text-blue-400',
+            className: 'fill-current text-blue-400 animate-in fade-in',
           }}
           curveProps={{
-            className: 'stroke-blue-400 stroke-2',
+            className: 'stroke-blue-400 stroke-2 animate-in fade-in',
           }}
           controlPointLineProps={{
             className: 'stroke-gray-400',
