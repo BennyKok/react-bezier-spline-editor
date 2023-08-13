@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { BezierSplineEditor } from 'react-bezier-spline-editor/react';
 import { Card, CardBody, Checkbox, Snippet } from '@nextui-org/react';
 import { Point } from 'react-bezier-spline-editor/core';
+import Link from 'next/link';
 
 export default function Home() {
   const [showPoints, setShowPoints] = useState(true);
@@ -24,14 +25,14 @@ export default function Home() {
         <p className="text-xl text-center">
           A React component for editing cubic bezier spline curves
         </p>
-        <a
+        <Link
           className="text-blue-500 hover:text-blue-600"
-          href=""
+          href="https://github.com/BennyKok/react-bezier-spline-editor"
           target="_blank"
           rel="noopener noreferrer"
         >
           View on GitHub
-        </a>
+        </Link>
       </div>
 
       <div className="flex flex-col items-center lg:items-start lg:flex-row gap-10 h-full">
