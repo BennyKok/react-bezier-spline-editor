@@ -57,7 +57,7 @@ Copy the code below for the same styling as the demo
 <BezierSplineEditor
   points={points}
   onPointsChange={setPoints}
-  showPoints={showPoints}
+  showPoints
   backgroundLineProps={{
     className: 'stroke-gray-200',
   }}
