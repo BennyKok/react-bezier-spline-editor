@@ -75,8 +75,6 @@ Copy the code below for the same styling as the demo
 ```
 </details>
 
-<br>
-
 ### Spline Calculation
 
 Calculating the spline's Y value based on X
