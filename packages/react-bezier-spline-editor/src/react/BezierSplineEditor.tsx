@@ -67,8 +67,11 @@ export function BezierSplineEditor({
     event.preventDefault();
 
     const rect = svgRef.current.getBoundingClientRect();
-    let x = event.clientX - rect.left - padding;
-    let y = event.clientY - rect.top - padding;
+
+    const scale = rect.width / width
+
+    let x = (event.clientX - rect.left - padding) / scale;
+    let y = (event.clientY - rect.top - padding) / scale;
 
     // Constrain all points within the bounding box
     x = Math.max(0, Math.min(rect.width - padding * 2, x));
@@ -92,8 +95,11 @@ export function BezierSplineEditor({
   const handleAddPoint = (event: React.MouseEvent) => {
     if (!svgRef.current) return;
     const rect = svgRef.current.getBoundingClientRect();
-    const x = event.clientX - rect.left - padding;
-    const y = event.clientY - rect.top - padding;
+    
+    const scale = rect.width / width
+
+    let x = (event.clientX - rect.left - padding) / scale;
+    let y = (event.clientY - rect.top - padding) / scale;
 
     // Find the nearest existing anchor points
     // let nearestIndex = 0;
