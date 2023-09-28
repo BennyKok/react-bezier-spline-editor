@@ -74,8 +74,8 @@ export function BezierSplineEditor({
     let y = (event.clientY - rect.top - padding) / scale;
 
     // Constrain all points within the bounding box
-    x = Math.max(0, Math.min(rect.width - padding * 2, x));
-    y = Math.max(0, Math.min(rect.height - padding * 2, y));
+    x = Math.max(0, Math.min((rect.width - padding * 2) / scale, x));
+    y = Math.max(0, Math.min((rect.height - padding * 2) / scale, y));
 
     const newPoints = [...relativePoints];
     if (index === 0 || index === relativePoints.length - 1) {
